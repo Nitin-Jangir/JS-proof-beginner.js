@@ -8,39 +8,40 @@ Assessment Requirements
 4. For good measure, getTotalSupply() should return the number of NFT's you have created
 */
 
-// create a variable to hold your NFT's
+//Create a variable to hold your NFT's
 let NFTSample = [];
-// this function will take in some values as parameters, create an
+
+//This function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-
-function mintNFT (_name, _description, _creator) {
-    let NFT = {
-        "name": "_name",
-        "description": "_description",
-        "creator": "_creator",
-    };
+function mintNFT(_name, _description, _creator) {
+  let NFT = {
+    name: _name,
+    description: _description,
+    creator: _creator
+  };
   
-    NFTSample.push(NFT);
+  NFTSample.push(NFT);
 }
 
-// create a "loop" that will go through an "array" of NFT's
+//Create a "loop" that will go through an "array" of NFTs
 // and print their metadata with console.log()
-function listNFTs () {
-    for (let i = 0; i < NFTSample.length; i++) {
-        let NFT = NFTSample[i];
-        console.log("Name: " + NFT.name);
-        console.log("Description: " + NFT.description);
-        console.log("Creator: " + NFT.creator);
-    }
+function listNFTs() {
+  for (let i = 0; i < NFTSample.length; i++) {
+    let NFT = NFTSample[i];
+    console.log("Name: " + NFT.name);
+    console.log("Description: " + NFT.description);
+    console.log("Creator: " + NFT.creator);
+    console.log("------------------------");
+  }
 }
 
 // print the total number of NFTs we have minted to the console
 function getTotalSupply() {
-    console.log("Total Supply: " + NFTSample.length);
+  console.log("Total Supply: " + NFTSample.length);
 }
 
-// call your functions below this line
+//Call your functions below this line
 
 mintNFT("NFT 1", "Description 1", "Creator 1");
 mintNFT("NFT 2", "Description 2", "Creator 2");
